@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "QtChatApp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "QtChatApp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QtChatApp-Debug-952801482684b5fae813.json",
+					"name" : "QtChatApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QtChatApp_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QtChatApp_autogen-Debug-81bba12ebb8848edb1ea.json",
+					"name" : "QtChatApp_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QtChatApp_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QtChatApp_autogen_timestamp_deps-Debug-66f4002d5921835fdaf4.json",
+					"name" : "QtChatApp_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/mohamedfadul/Desktop/UNI/CS/CS2LabProject/lab-cs2-project/build/Qt_6_10_2_for_macOS-Debug",
+		"source" : "/Users/mohamedfadul/Desktop/UNI/CS/CS2LabProject/lab-cs2-project"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

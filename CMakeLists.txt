@@ -29,7 +29,8 @@ set(HEADERS
     SettingsScreen.h
 )
 
-add_executable(QtChatApp ${SOURCES} ${HEADERS})
+add_executable(QtChatApp ${SOURCES} ${HEADERS}
+    applogic.h applogic.cpp)
 
 if(Qt6_FOUND)
     target_link_libraries(QtChatApp PRIVATE Qt6::Core Qt6::Widgets)
