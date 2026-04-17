@@ -29,4 +29,16 @@ void AppLogic::onGuiLoginRequested(const QString &username, const QString &host,
     emit requestNetworkConnect(m_myUsername, m_host, m_port);
 }
 
+void AppLogic::onGuiMessageSendRequested(const QString &text) {
+    // Validation: don't send empty strings
+    if (text.trimmed().isEmpty()) return;
+
+    // Tell UI to display our own message immediately (optional, or wait for server bounce)
+    emit appendChatMessage(m_myUsername, text.trimmed(), true);
+
+    // Pass text to Ann, where she will wrap it in JSON using QJson objects
+    emit requestNetworkSendChat(text.trimmed());
+}
+
+
 // - Mohamed Fadul Mohamed
