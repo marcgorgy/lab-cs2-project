@@ -1,4 +1,5 @@
 #include "AppLogic.h"
+#include <QTimer> // ADDING THIS FOR FAKE DELAYS -- TESTING PHASE ONLY, COMMENT OUT LATER
 
 AppLogic::AppLogic(QObject *parent) : QObject(parent), m_isLoggedIn(false), m_port(0)
 {
@@ -27,6 +28,11 @@ void AppLogic::onGuiLoginRequested(const QString &username, const QString &host,
 
     // Passes clean data to our networking teammate, Ann
     emit requestNetworkConnect(m_myUsername, m_host, m_port);
+
+    /* //  TEMPORARY HACK TO TEST WITHOUT ANN -- FOR NOUR from MOHAMED
+    // THis will wait 1 second, then pretend Ann's code successfully connected
+    QTimer::singleShot(1000, this, &AppLogic::onNetworkConnected);
+    */
 }
 
 void AppLogic::onGuiMessageSendRequested(const QString &text) {
@@ -38,6 +44,13 @@ void AppLogic::onGuiMessageSendRequested(const QString &text) {
 
     // Pass text to Ann, where she will wrap it in JSON using QJson objects
     emit requestNetworkSendChat(text.trimmed());
+
+    /* // TEMPORARY HACK TO TEST WITHOUT ANN -- FOR NOUR from MOHAMED
+    // Wait half a second, then pretend the server replied
+    QTimer::singleShot(500, this, [this, text]() {
+        onNetworkIncomingMessage("MockServer", "You just said: " + text);
+    });
+    */
 }
 
 void AppLogic::onGuiLogoutRequested() {
