@@ -33,7 +33,7 @@ void AppLogic::onGuiMessageSendRequested(const QString &text) {
     // Validation: don't send empty strings
     if (text.trimmed().isEmpty()) return;
 
-    // Tell UI to display our own message immediately (optional, or wait for server bounce)
+    // Tell UI to display our own message immediately
     emit appendChatMessage(m_myUsername, text.trimmed(), true);
 
     // Pass text to Ann, where she will wrap it in JSON using QJson objects
@@ -70,6 +70,37 @@ void AppLogic::onNetworkDisconnected() {
 
     emit chatScreenClearUsers();
     emit navigateToLoginScreen();
+}
+
+// ─── 3. MESSAGE FORMATTING & DATA HANDLING ─────────────
+
+void AppLogic::onNetworkIncomingMessage(const QString &sender, const QString &text) {
+    // Ignore if it's our own message bouncing back
+    if (sender == m_myUsername) return;
+
+    emit appendChatMessage(sender, text, false);
+}
+
+void AppLogic::onNetworkUserJoined(const QString &username) {
+    if (!m_onlineUsers.contains(username)) {
+        m_onlineUsers.append(username);
+        emit chatScreenAddUser(username);
+        emit appendSystemMessage(username + " joined the chat.");
+    }
+}
+
+void AppLogic::onNetworkUserLeft(const QString &username) {
+    m_onlineUsers.removeAll(username);
+    emit chatScreenRemoveUser(username);
+    emit appendSystemMessage(username + " left the chat.");
+}
+
+void AppLogic::onNetworkUserListReceived(const QStringList &users) { // Q string list storing and returning current online user
+    m_onlineUsers = users;
+    emit chatScreenClearUsers();
+    for (const QString &user : m_onlineUsers) {
+        emit chatScreenAddUser(user);
+    }
 }
 
 // - Mohamed Fadul Mohamed
