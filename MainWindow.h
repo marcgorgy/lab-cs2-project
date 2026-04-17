@@ -19,6 +19,10 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override = default;
 
+    LoginScreen* getLoginScreen() const { return m_loginScreen; }
+    ChatRoomScreen* getChatRoomScreen() const { return m_chatScreen; }
+    SettingsScreen* getSettingsScreen() const { return m_settingsScreen; }
+
 public slots:
     void showLogin();
     void showChatRoom(const QString &username, const QString &host, int port);

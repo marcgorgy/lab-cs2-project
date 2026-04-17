@@ -21,8 +21,8 @@ MainWindow::MainWindow(QWidget *parent)
     m_stack->addWidget(m_settingsScreen);// index 2
 
     // Navigation signals
-    connect(m_loginScreen, &LoginScreen::loginRequested,
-            this, &MainWindow::showChatRoom);
+   /* connect(m_loginScreen, &LoginScreen::loginRequested,
+            this, &MainWindow::showChatRoom); */ // Deleted by Mohamed, this defies the business layer
 
     connect(m_chatScreen, &ChatRoomScreen::settingsRequested,
             this, &MainWindow::showSettings);
