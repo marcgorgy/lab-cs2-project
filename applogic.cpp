@@ -40,5 +40,36 @@ void AppLogic::onGuiMessageSendRequested(const QString &text) {
     emit requestNetworkSendChat(text.trimmed());
 }
 
+void AppLogic::onGuiLogoutRequested() {
+    emit requestNetworkDisconnect();
+}
+
+// ─── 2. STATE MANAGEMENT & ROUTING (Network -> GUI) ─────────────
+
+void AppLogic::onNetworkConnected() {
+    m_isLoggedIn = true;
+
+    // Stop the loading spinner
+    emit setLoginConnectingState(false);
+
+    // Switch the screen to View 2
+    emit navigateToChatScreen(m_myUsername, m_host, m_port);
+    emit updateNetworkStatus("Connected", false);
+}
+
+void AppLogic::onNetworkConnectionFailed(const QString &errorMsg) {
+    m_isLoggedIn = false;
+    emit setLoginConnectingState(false);
+    emit showLoginError(errorMsg);
+}
+
+void AppLogic::onNetworkDisconnected() {
+    m_isLoggedIn = false;
+    m_onlineUsers.clear();
+    m_myUsername.clear();
+
+    emit chatScreenClearUsers();
+    emit navigateToLoginScreen();
+}
 
 // - Mohamed Fadul Mohamed
