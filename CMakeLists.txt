@@ -8,10 +8,10 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-find_package(Qt6 COMPONENTS Core Widgets REQUIRED)
-# Fall back to Qt5 if Qt6 is not available
+find_package(Qt6 COMPONENTS Core Widgets Network REQUIRED)
+
 if(NOT Qt6_FOUND)
-    find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
+    find_package(Qt5 COMPONENTS Core Widgets Network REQUIRED)
 endif()
 
 set(SOURCES
@@ -20,6 +20,8 @@ set(SOURCES
     LoginScreen.cpp
     ChatRoomScreen.cpp
     SettingsScreen.cpp
+    AppLogic.cpp
+    NetworkManager.cpp
 )
 
 set(HEADERS
@@ -27,13 +29,14 @@ set(HEADERS
     LoginScreen.h
     ChatRoomScreen.h
     SettingsScreen.h
+    AppLogic.h
+    NetworkManager.h
 )
 
-add_executable(QtChatApp ${SOURCES} ${HEADERS}
-    applogic.h applogic.cpp)
+add_executable(QtChatApp ${SOURCES} ${HEADERS})
 
 if(Qt6_FOUND)
-    target_link_libraries(QtChatApp PRIVATE Qt6::Core Qt6::Widgets)
+    target_link_libraries(QtChatApp PRIVATE Qt6::Core Qt6::Widgets Qt6::Network)
 else()
-    target_link_libraries(QtChatApp PRIVATE Qt5::Core Qt5::Widgets)
+    target_link_libraries(QtChatApp PRIVATE Qt5::Core Qt5::Widgets Qt5::Network)
 endif()
