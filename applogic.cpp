@@ -1,4 +1,4 @@
-#include "AppLogic.h"
+#include "applogic.h"
 #include <QTimer> // ADDING THIS FOR FAKE DELAYS -- TESTING PHASE ONLY, COMMENT OUT LATER
 
 AppLogic::AppLogic(QObject *parent) : QObject(parent), m_isLoggedIn(false), m_port(0)

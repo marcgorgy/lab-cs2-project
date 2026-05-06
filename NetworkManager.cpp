@@ -1,4 +1,9 @@
 #include "NetworkManager.h"
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonValue>
+
 
 NetworkManager::NetworkManager(QObject *parent)
     : QObject(parent),

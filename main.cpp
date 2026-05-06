@@ -1,6 +1,6 @@
 #include <QApplication>
 #include "MainWindow.h"
-#include "AppLogic.h"
+#include "applogic.h"
 #include "NetworkManager.h"
 
 #include "LoginScreen.h"

@@ -20,7 +20,7 @@ set(SOURCES
     LoginScreen.cpp
     ChatRoomScreen.cpp
     SettingsScreen.cpp
-    AppLogic.cpp
+    applogic.cpp
     NetworkManager.cpp
 )
 
@@ -29,7 +29,7 @@ set(HEADERS
     LoginScreen.h
     ChatRoomScreen.h
     SettingsScreen.h
-    AppLogic.h
+    applogic.h
     NetworkManager.h
 )
 
