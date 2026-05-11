@@ -90,7 +90,7 @@ awaitable<void> listener() {
     auto executor = co_await boost::asio::this_coro::executor;
     tcp::acceptor acceptor(executor, {tcp::v4(), 12345});
 
-    std::cout << "Boost.Asio Server running on port 54321...\n";
+    std::cout << "Boost.Asio Server running on port 12345...\n";
 
     while (true) {
         auto [ec, socket] = co_await acceptor.async_accept(as_tuple(use_awaitable));
