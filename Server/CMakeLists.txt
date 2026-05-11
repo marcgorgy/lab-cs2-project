@@ -4,7 +4,8 @@ project(ChatServer)
 set(CMAKE_CXX_STANDARD 20) # for couroutines
 
 find_package(nlohmann_json REQUIRED) # JSON library
-add_executable(ChatServer main.cpp)
+add_executable(ChatServer main.cpp
+        main.cpp)
 
 target_link_libraries(ChatServer PRIVATE
         Boost::boost
