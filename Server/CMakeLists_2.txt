@@ -7,7 +7,7 @@ find_package(Boost REQUIRED COMPONENTS system)
 find_package(nlohmann_json REQUIRED) # JSON library
 
 add_executable(ChatServer main.cpp
-        main.cpp)
+        chatserver_activation.cpp)
 
 target_link_libraries(ChatServer PRIVATE
         Boost::boost

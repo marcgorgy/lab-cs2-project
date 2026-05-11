@@ -452,6 +452,9 @@ QtChatApp_autogen/timestamp: /home/marc_gorgy/lab-cs2-project/CMakeLists.txt \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfigVersion.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.83.0.cmake \
   /usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/kwin/FindXKB.cmake \
   /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapAtomic.cmake \
   /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake \
@@ -552,6 +555,12 @@ QtChatApp_autogen/timestamp: /home/marc_gorgy/lab-cs2-project/CMakeLists.txt \
   /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-none.cmake \
   /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
   /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0/boost_headers-config-version.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0/boost_headers-config.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/boost_system-config-version.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/boost_system-config.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/libboost_system-variant-shared.cmake \
+  /usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/libboost_system-variant-static.cmake \
   /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake \
   /usr/share/cmake-3.28/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake \
@@ -569,6 +578,7 @@ QtChatApp_autogen/timestamp: /home/marc_gorgy/lab-cs2-project/CMakeLists.txt \
   /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake \
   /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake \
   /usr/share/cmake-3.28/Modules/FeatureSummary.cmake \
+  /usr/share/cmake-3.28/Modules/FindBoost.cmake \
   /usr/share/cmake-3.28/Modules/FindOpenGL.cmake \
   /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake \
   /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake \
@@ -584,7 +594,10 @@ QtChatApp_autogen/timestamp: /home/marc_gorgy/lab-cs2-project/CMakeLists.txt \
   /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake \
   /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake \
   /usr/share/cmake-3.28/Modules/Platform/Linux.cmake \
-  /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake
+  /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake \
+  /usr/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake \
+  /usr/share/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake \
+  /usr/share/cmake/nlohmann_json/nlohmann_jsonTargets.cmake
 
 CMakeFiles/QtChatApp.dir/ChatRoomScreen.cpp.o: /home/marc_gorgy/lab-cs2-project/ChatRoomScreen.cpp \
   /home/marc_gorgy/lab-cs2-project/ChatRoomScreen.h \
@@ -4015,6 +4028,8 @@ QtChatApp_autogen/EWIEGA46WW/moc_NetworkManager.cpp:
 
 /usr/include/c++/13/bits/chrono.h:
 
+/usr/share/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake:
+
 /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h:
@@ -4047,6 +4062,8 @@ QtChatApp_autogen/EWIEGA46WW/moc_NetworkManager.cpp:
 
 /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake:
 
+/usr/share/cmake-3.28/Modules/FindBoost.cmake:
+
 /usr/share/cmake-3.28/Modules/FeatureSummary.cmake:
 
 /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake:
@@ -4073,6 +4090,10 @@ QtChatApp_autogen/EWIEGA46WW/moc_NetworkManager.cpp:
 
 /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake:
 
+/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/boost_system-config-version.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0/boost_headers-config-version.cmake:
+
 /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake:
@@ -4084,6 +4105,10 @@ QtChatApp_autogen/EWIEGA46WW/moc_NetworkManager.cpp:
 /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
@@ -4099,6 +4124,8 @@ QtChatApp_autogen/EWIEGA46WW/moc_NetworkManager.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
+/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/libboost_system-variant-static.cmake:
+
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/c++/13/bits/requires_hosted.h:
@@ -4108,6 +4135,8 @@ QtChatApp_autogen/EWIEGA46WW/moc_NetworkManager.cpp:
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h:
+
+/usr/share/cmake/nlohmann_json/nlohmann_jsonTargets.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
@@ -4199,6 +4228,10 @@ QtChatApp_autogen/EWIEGA46WW/moc_NetworkManager.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
+/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets-none.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
 /usr/include/strings.h:
 
 /usr/include/c++/13/exception:
@@ -4236,8 +4269,6 @@ QtChatApp_autogen/EWIEGA46WW/moc_SettingsScreen.cpp:
 /usr/include/c++/13/functional:
 
 /usr/include/c++/13/ext/string_conversions.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:
 
 /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake:
 
@@ -4435,8 +4466,6 @@ QtChatApp_autogen/EWIEGA46WW/moc_SettingsScreen.cpp:
 
 /home/marc_gorgy/lab-cs2-project/applogic.cpp:
 
-/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake:
-
 /home/marc_gorgy/lab-cs2-project/LoginScreen.cpp:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
@@ -4474,6 +4503,8 @@ QtChatApp_autogen/EWIEGA46WW/moc_SettingsScreen.cpp:
 /home/marc_gorgy/lab-cs2-project/CMakeLists.txt:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonObject:
+
+/usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake:
 
 /usr/include/c++/13/bits/ranges_cmp.h:
 
@@ -4615,6 +4646,8 @@ QtChatApp_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
+/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0/boost_headers-config.cmake:
+
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h:
@@ -4698,8 +4731,6 @@ QtChatApp_autogen/moc_predefs.h:
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
@@ -4909,6 +4940,8 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer_impl.h:
 
+/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/boost_system-config.cmake:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainerfwd.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h:
@@ -4948,6 +4981,8 @@ QtChatApp_autogen/EWIEGA46WW/moc_ChatRoomScreen.cpp:
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonobject.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0/libboost_system-variant-shared.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h:
 
@@ -5123,11 +5158,17 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h:
 
+/usr/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QString:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.83.0.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake:
 
@@ -5184,6 +5225,8 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfigVersion.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreDependencies.cmake:
 
@@ -5274,7 +5317,3 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets-none.cmake:

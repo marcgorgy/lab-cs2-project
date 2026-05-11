@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/marc_gorgy/lab-cs2-project/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/QtChatApp.dir/all
+all: CMakeFiles/CombinedChatApp.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,89 +71,89 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/QtChatApp.dir/clean
-clean: CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/clean
-clean: CMakeFiles/QtChatApp_autogen.dir/clean
+clean: CMakeFiles/CombinedChatApp.dir/clean
+clean: CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/clean
+clean: CMakeFiles/CombinedChatApp_autogen.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/QtChatApp.dir
+# Target rules for target CMakeFiles/CombinedChatApp.dir
 
 # All Build rule for target.
-CMakeFiles/QtChatApp.dir/all: CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/all
-CMakeFiles/QtChatApp.dir/all: CMakeFiles/QtChatApp_autogen.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/marc_gorgy/lab-cs2-project/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target QtChatApp"
-.PHONY : CMakeFiles/QtChatApp.dir/all
+CMakeFiles/CombinedChatApp.dir/all: CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/all
+CMakeFiles/CombinedChatApp.dir/all: CMakeFiles/CombinedChatApp_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/marc_gorgy/lab-cs2-project/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target CombinedChatApp"
+.PHONY : CMakeFiles/CombinedChatApp.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/QtChatApp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/marc_gorgy/lab-cs2-project/build/CMakeFiles 11
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/QtChatApp.dir/all
+CMakeFiles/CombinedChatApp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/marc_gorgy/lab-cs2-project/build/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CombinedChatApp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/marc_gorgy/lab-cs2-project/build/CMakeFiles 0
-.PHONY : CMakeFiles/QtChatApp.dir/rule
+.PHONY : CMakeFiles/CombinedChatApp.dir/rule
 
 # Convenience name for target.
-QtChatApp: CMakeFiles/QtChatApp.dir/rule
-.PHONY : QtChatApp
+CombinedChatApp: CMakeFiles/CombinedChatApp.dir/rule
+.PHONY : CombinedChatApp
 
 # clean rule for target.
-CMakeFiles/QtChatApp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/clean
-.PHONY : CMakeFiles/QtChatApp.dir/clean
+CMakeFiles/CombinedChatApp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/clean
+.PHONY : CMakeFiles/CombinedChatApp.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/QtChatApp_autogen_timestamp_deps.dir
+# Target rules for target CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir
 
 # All Build rule for target.
-CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/build.make CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/build.make CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/marc_gorgy/lab-cs2-project/build/CMakeFiles --progress-num= "Built target QtChatApp_autogen_timestamp_deps"
-.PHONY : CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/all
+CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/build.make CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/build.make CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/marc_gorgy/lab-cs2-project/build/CMakeFiles --progress-num= "Built target CombinedChatApp_autogen_timestamp_deps"
+.PHONY : CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/marc_gorgy/lab-cs2-project/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/marc_gorgy/lab-cs2-project/build/CMakeFiles 0
-.PHONY : CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/rule
+.PHONY : CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
-QtChatApp_autogen_timestamp_deps: CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/rule
-.PHONY : QtChatApp_autogen_timestamp_deps
+CombinedChatApp_autogen_timestamp_deps: CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/rule
+.PHONY : CombinedChatApp_autogen_timestamp_deps
 
 # clean rule for target.
-CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/build.make CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/clean
-.PHONY : CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/clean
+CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/build.make CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/clean
+.PHONY : CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/QtChatApp_autogen.dir
+# Target rules for target CMakeFiles/CombinedChatApp_autogen.dir
 
 # All Build rule for target.
-CMakeFiles/QtChatApp_autogen.dir/all: CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp_autogen.dir/build.make CMakeFiles/QtChatApp_autogen.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp_autogen.dir/build.make CMakeFiles/QtChatApp_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/marc_gorgy/lab-cs2-project/build/CMakeFiles --progress-num=11 "Built target QtChatApp_autogen"
-.PHONY : CMakeFiles/QtChatApp_autogen.dir/all
+CMakeFiles/CombinedChatApp_autogen.dir/all: CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp_autogen.dir/build.make CMakeFiles/CombinedChatApp_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp_autogen.dir/build.make CMakeFiles/CombinedChatApp_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/marc_gorgy/lab-cs2-project/build/CMakeFiles --progress-num=12 "Built target CombinedChatApp_autogen"
+.PHONY : CMakeFiles/CombinedChatApp_autogen.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/QtChatApp_autogen.dir/rule: cmake_check_build_system
+CMakeFiles/CombinedChatApp_autogen.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/marc_gorgy/lab-cs2-project/build/CMakeFiles 1
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/QtChatApp_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CombinedChatApp_autogen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/marc_gorgy/lab-cs2-project/build/CMakeFiles 0
-.PHONY : CMakeFiles/QtChatApp_autogen.dir/rule
+.PHONY : CMakeFiles/CombinedChatApp_autogen.dir/rule
 
 # Convenience name for target.
-QtChatApp_autogen: CMakeFiles/QtChatApp_autogen.dir/rule
-.PHONY : QtChatApp_autogen
+CombinedChatApp_autogen: CMakeFiles/CombinedChatApp_autogen.dir/rule
+.PHONY : CombinedChatApp_autogen
 
 # clean rule for target.
-CMakeFiles/QtChatApp_autogen.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp_autogen.dir/build.make CMakeFiles/QtChatApp_autogen.dir/clean
-.PHONY : CMakeFiles/QtChatApp_autogen.dir/clean
+CMakeFiles/CombinedChatApp_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp_autogen.dir/build.make CMakeFiles/CombinedChatApp_autogen.dir/clean
+.PHONY : CMakeFiles/CombinedChatApp_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -117,50 +117,50 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named QtChatApp
+# Target rules for targets named CombinedChatApp
 
 # Build rule for target.
-QtChatApp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 QtChatApp
-.PHONY : QtChatApp
+CombinedChatApp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CombinedChatApp
+.PHONY : CombinedChatApp
 
 # fast build rule for target.
-QtChatApp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/build
-.PHONY : QtChatApp/fast
+CombinedChatApp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/build
+.PHONY : CombinedChatApp/fast
 
 #=============================================================================
-# Target rules for targets named QtChatApp_autogen_timestamp_deps
+# Target rules for targets named CombinedChatApp_autogen_timestamp_deps
 
 # Build rule for target.
-QtChatApp_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 QtChatApp_autogen_timestamp_deps
-.PHONY : QtChatApp_autogen_timestamp_deps
+CombinedChatApp_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CombinedChatApp_autogen_timestamp_deps
+.PHONY : CombinedChatApp_autogen_timestamp_deps
 
 # fast build rule for target.
-QtChatApp_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/build.make CMakeFiles/QtChatApp_autogen_timestamp_deps.dir/build
-.PHONY : QtChatApp_autogen_timestamp_deps/fast
+CombinedChatApp_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/build.make CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/build
+.PHONY : CombinedChatApp_autogen_timestamp_deps/fast
 
 #=============================================================================
-# Target rules for targets named QtChatApp_autogen
+# Target rules for targets named CombinedChatApp_autogen
 
 # Build rule for target.
-QtChatApp_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 QtChatApp_autogen
-.PHONY : QtChatApp_autogen
+CombinedChatApp_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CombinedChatApp_autogen
+.PHONY : CombinedChatApp_autogen
 
 # fast build rule for target.
-QtChatApp_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp_autogen.dir/build.make CMakeFiles/QtChatApp_autogen.dir/build
-.PHONY : QtChatApp_autogen/fast
+CombinedChatApp_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp_autogen.dir/build.make CMakeFiles/CombinedChatApp_autogen.dir/build
+.PHONY : CombinedChatApp_autogen/fast
 
 ChatRoomScreen.o: ChatRoomScreen.cpp.o
 .PHONY : ChatRoomScreen.o
 
 # target to build an object file
 ChatRoomScreen.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/ChatRoomScreen.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/ChatRoomScreen.cpp.o
 .PHONY : ChatRoomScreen.cpp.o
 
 ChatRoomScreen.i: ChatRoomScreen.cpp.i
@@ -168,7 +168,7 @@ ChatRoomScreen.i: ChatRoomScreen.cpp.i
 
 # target to preprocess a source file
 ChatRoomScreen.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/ChatRoomScreen.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/ChatRoomScreen.cpp.i
 .PHONY : ChatRoomScreen.cpp.i
 
 ChatRoomScreen.s: ChatRoomScreen.cpp.s
@@ -176,15 +176,39 @@ ChatRoomScreen.s: ChatRoomScreen.cpp.s
 
 # target to generate assembly for a file
 ChatRoomScreen.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/ChatRoomScreen.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/ChatRoomScreen.cpp.s
 .PHONY : ChatRoomScreen.cpp.s
+
+CombinedChatApp_autogen/mocs_compilation.o: CombinedChatApp_autogen/mocs_compilation.cpp.o
+.PHONY : CombinedChatApp_autogen/mocs_compilation.o
+
+# target to build an object file
+CombinedChatApp_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/CombinedChatApp_autogen/mocs_compilation.cpp.o
+.PHONY : CombinedChatApp_autogen/mocs_compilation.cpp.o
+
+CombinedChatApp_autogen/mocs_compilation.i: CombinedChatApp_autogen/mocs_compilation.cpp.i
+.PHONY : CombinedChatApp_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+CombinedChatApp_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/CombinedChatApp_autogen/mocs_compilation.cpp.i
+.PHONY : CombinedChatApp_autogen/mocs_compilation.cpp.i
+
+CombinedChatApp_autogen/mocs_compilation.s: CombinedChatApp_autogen/mocs_compilation.cpp.s
+.PHONY : CombinedChatApp_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+CombinedChatApp_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/CombinedChatApp_autogen/mocs_compilation.cpp.s
+.PHONY : CombinedChatApp_autogen/mocs_compilation.cpp.s
 
 LoginScreen.o: LoginScreen.cpp.o
 .PHONY : LoginScreen.o
 
 # target to build an object file
 LoginScreen.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/LoginScreen.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/LoginScreen.cpp.o
 .PHONY : LoginScreen.cpp.o
 
 LoginScreen.i: LoginScreen.cpp.i
@@ -192,7 +216,7 @@ LoginScreen.i: LoginScreen.cpp.i
 
 # target to preprocess a source file
 LoginScreen.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/LoginScreen.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/LoginScreen.cpp.i
 .PHONY : LoginScreen.cpp.i
 
 LoginScreen.s: LoginScreen.cpp.s
@@ -200,7 +224,7 @@ LoginScreen.s: LoginScreen.cpp.s
 
 # target to generate assembly for a file
 LoginScreen.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/LoginScreen.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/LoginScreen.cpp.s
 .PHONY : LoginScreen.cpp.s
 
 MainWindow.o: MainWindow.cpp.o
@@ -208,7 +232,7 @@ MainWindow.o: MainWindow.cpp.o
 
 # target to build an object file
 MainWindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/MainWindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/MainWindow.cpp.o
 .PHONY : MainWindow.cpp.o
 
 MainWindow.i: MainWindow.cpp.i
@@ -216,7 +240,7 @@ MainWindow.i: MainWindow.cpp.i
 
 # target to preprocess a source file
 MainWindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/MainWindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/MainWindow.cpp.i
 .PHONY : MainWindow.cpp.i
 
 MainWindow.s: MainWindow.cpp.s
@@ -224,7 +248,7 @@ MainWindow.s: MainWindow.cpp.s
 
 # target to generate assembly for a file
 MainWindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/MainWindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/MainWindow.cpp.s
 .PHONY : MainWindow.cpp.s
 
 NetworkManager.o: NetworkManager.cpp.o
@@ -232,7 +256,7 @@ NetworkManager.o: NetworkManager.cpp.o
 
 # target to build an object file
 NetworkManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/NetworkManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/NetworkManager.cpp.o
 .PHONY : NetworkManager.cpp.o
 
 NetworkManager.i: NetworkManager.cpp.i
@@ -240,7 +264,7 @@ NetworkManager.i: NetworkManager.cpp.i
 
 # target to preprocess a source file
 NetworkManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/NetworkManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/NetworkManager.cpp.i
 .PHONY : NetworkManager.cpp.i
 
 NetworkManager.s: NetworkManager.cpp.s
@@ -248,39 +272,15 @@ NetworkManager.s: NetworkManager.cpp.s
 
 # target to generate assembly for a file
 NetworkManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/NetworkManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/NetworkManager.cpp.s
 .PHONY : NetworkManager.cpp.s
-
-QtChatApp_autogen/mocs_compilation.o: QtChatApp_autogen/mocs_compilation.cpp.o
-.PHONY : QtChatApp_autogen/mocs_compilation.o
-
-# target to build an object file
-QtChatApp_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/QtChatApp_autogen/mocs_compilation.cpp.o
-.PHONY : QtChatApp_autogen/mocs_compilation.cpp.o
-
-QtChatApp_autogen/mocs_compilation.i: QtChatApp_autogen/mocs_compilation.cpp.i
-.PHONY : QtChatApp_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-QtChatApp_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/QtChatApp_autogen/mocs_compilation.cpp.i
-.PHONY : QtChatApp_autogen/mocs_compilation.cpp.i
-
-QtChatApp_autogen/mocs_compilation.s: QtChatApp_autogen/mocs_compilation.cpp.s
-.PHONY : QtChatApp_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-QtChatApp_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/QtChatApp_autogen/mocs_compilation.cpp.s
-.PHONY : QtChatApp_autogen/mocs_compilation.cpp.s
 
 SettingsScreen.o: SettingsScreen.cpp.o
 .PHONY : SettingsScreen.o
 
 # target to build an object file
 SettingsScreen.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/SettingsScreen.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/SettingsScreen.cpp.o
 .PHONY : SettingsScreen.cpp.o
 
 SettingsScreen.i: SettingsScreen.cpp.i
@@ -288,7 +288,7 @@ SettingsScreen.i: SettingsScreen.cpp.i
 
 # target to preprocess a source file
 SettingsScreen.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/SettingsScreen.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/SettingsScreen.cpp.i
 .PHONY : SettingsScreen.cpp.i
 
 SettingsScreen.s: SettingsScreen.cpp.s
@@ -296,7 +296,7 @@ SettingsScreen.s: SettingsScreen.cpp.s
 
 # target to generate assembly for a file
 SettingsScreen.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/SettingsScreen.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/SettingsScreen.cpp.s
 .PHONY : SettingsScreen.cpp.s
 
 applogic.o: applogic.cpp.o
@@ -304,7 +304,7 @@ applogic.o: applogic.cpp.o
 
 # target to build an object file
 applogic.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/applogic.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/applogic.cpp.o
 .PHONY : applogic.cpp.o
 
 applogic.i: applogic.cpp.i
@@ -312,7 +312,7 @@ applogic.i: applogic.cpp.i
 
 # target to preprocess a source file
 applogic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/applogic.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/applogic.cpp.i
 .PHONY : applogic.cpp.i
 
 applogic.s: applogic.cpp.s
@@ -320,15 +320,39 @@ applogic.s: applogic.cpp.s
 
 # target to generate assembly for a file
 applogic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/applogic.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/applogic.cpp.s
 .PHONY : applogic.cpp.s
+
+chatserver_activation.o: chatserver_activation.cpp.o
+.PHONY : chatserver_activation.o
+
+# target to build an object file
+chatserver_activation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/chatserver_activation.cpp.o
+.PHONY : chatserver_activation.cpp.o
+
+chatserver_activation.i: chatserver_activation.cpp.i
+.PHONY : chatserver_activation.i
+
+# target to preprocess a source file
+chatserver_activation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/chatserver_activation.cpp.i
+.PHONY : chatserver_activation.cpp.i
+
+chatserver_activation.s: chatserver_activation.cpp.s
+.PHONY : chatserver_activation.s
+
+# target to generate assembly for a file
+chatserver_activation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/chatserver_activation.cpp.s
+.PHONY : chatserver_activation.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -336,7 +360,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -344,7 +368,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtChatApp.dir/build.make CMakeFiles/QtChatApp.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -355,12 +379,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... QtChatApp_autogen"
-	@echo "... QtChatApp_autogen_timestamp_deps"
-	@echo "... QtChatApp"
+	@echo "... CombinedChatApp_autogen"
+	@echo "... CombinedChatApp_autogen_timestamp_deps"
+	@echo "... CombinedChatApp"
 	@echo "... ChatRoomScreen.o"
 	@echo "... ChatRoomScreen.i"
 	@echo "... ChatRoomScreen.s"
+	@echo "... CombinedChatApp_autogen/mocs_compilation.o"
+	@echo "... CombinedChatApp_autogen/mocs_compilation.i"
+	@echo "... CombinedChatApp_autogen/mocs_compilation.s"
 	@echo "... LoginScreen.o"
 	@echo "... LoginScreen.i"
 	@echo "... LoginScreen.s"
@@ -370,15 +397,15 @@ help:
 	@echo "... NetworkManager.o"
 	@echo "... NetworkManager.i"
 	@echo "... NetworkManager.s"
-	@echo "... QtChatApp_autogen/mocs_compilation.o"
-	@echo "... QtChatApp_autogen/mocs_compilation.i"
-	@echo "... QtChatApp_autogen/mocs_compilation.s"
 	@echo "... SettingsScreen.o"
 	@echo "... SettingsScreen.i"
 	@echo "... SettingsScreen.s"
 	@echo "... applogic.o"
 	@echo "... applogic.i"
 	@echo "... applogic.s"
+	@echo "... chatserver_activation.o"
+	@echo "... chatserver_activation.i"
+	@echo "... chatserver_activation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
