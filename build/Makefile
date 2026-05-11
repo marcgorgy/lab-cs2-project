@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/marc_gorgy/lab-cs2-project/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -130,6 +140,32 @@ CombinedChatApp/fast:
 .PHONY : CombinedChatApp/fast
 
 #=============================================================================
+# Target rules for targets named test_applogic
+
+# Build rule for target.
+test_applogic: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_applogic
+.PHONY : test_applogic
+
+# fast build rule for target.
+test_applogic/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_applogic.dir/build.make CMakeFiles/test_applogic.dir/build
+.PHONY : test_applogic/fast
+
+#=============================================================================
+# Target rules for targets named test_server_logic
+
+# Build rule for target.
+test_server_logic: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_server_logic
+.PHONY : test_server_logic
+
+# fast build rule for target.
+test_server_logic/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server_logic.dir/build.make CMakeFiles/test_server_logic.dir/build
+.PHONY : test_server_logic/fast
+
+#=============================================================================
 # Target rules for targets named CombinedChatApp_autogen_timestamp_deps
 
 # Build rule for target.
@@ -154,6 +190,214 @@ CombinedChatApp_autogen: cmake_check_build_system
 CombinedChatApp_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp_autogen.dir/build.make CMakeFiles/CombinedChatApp_autogen.dir/build
 .PHONY : CombinedChatApp_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_applogic_autogen_timestamp_deps
+
+# Build rule for target.
+test_applogic_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_applogic_autogen_timestamp_deps
+.PHONY : test_applogic_autogen_timestamp_deps
+
+# fast build rule for target.
+test_applogic_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_applogic_autogen_timestamp_deps.dir/build.make CMakeFiles/test_applogic_autogen_timestamp_deps.dir/build
+.PHONY : test_applogic_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named test_applogic_autogen
+
+# Build rule for target.
+test_applogic_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_applogic_autogen
+.PHONY : test_applogic_autogen
+
+# fast build rule for target.
+test_applogic_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_applogic_autogen.dir/build.make CMakeFiles/test_applogic_autogen.dir/build
+.PHONY : test_applogic_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_server_logic_autogen_timestamp_deps
+
+# Build rule for target.
+test_server_logic_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_server_logic_autogen_timestamp_deps
+.PHONY : test_server_logic_autogen_timestamp_deps
+
+# fast build rule for target.
+test_server_logic_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server_logic_autogen_timestamp_deps.dir/build.make CMakeFiles/test_server_logic_autogen_timestamp_deps.dir/build
+.PHONY : test_server_logic_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named test_server_logic_autogen
+
+# Build rule for target.
+test_server_logic_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_server_logic_autogen
+.PHONY : test_server_logic_autogen
+
+# fast build rule for target.
+test_server_logic_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server_logic_autogen.dir/build.make CMakeFiles/test_server_logic_autogen.dir/build
+.PHONY : test_server_logic_autogen/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock_autogen_timestamp_deps
+
+# Build rule for target.
+gmock_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_autogen_timestamp_deps
+.PHONY : gmock_autogen_timestamp_deps
+
+# fast build rule for target.
+gmock_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_autogen_timestamp_deps.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_autogen_timestamp_deps.dir/build
+.PHONY : gmock_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named gmock_autogen
+
+# Build rule for target.
+gmock_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_autogen
+.PHONY : gmock_autogen
+
+# fast build rule for target.
+gmock_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_autogen.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_autogen.dir/build
+.PHONY : gmock_autogen/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main_autogen_timestamp_deps
+
+# Build rule for target.
+gmock_main_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main_autogen_timestamp_deps
+.PHONY : gmock_main_autogen_timestamp_deps
+
+# fast build rule for target.
+gmock_main_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen_timestamp_deps.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen_timestamp_deps.dir/build
+.PHONY : gmock_main_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main_autogen
+
+# Build rule for target.
+gmock_main_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main_autogen
+.PHONY : gmock_main_autogen
+
+# fast build rule for target.
+gmock_main_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/build
+.PHONY : gmock_main_autogen/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest_autogen_timestamp_deps
+
+# Build rule for target.
+gtest_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_autogen_timestamp_deps
+.PHONY : gtest_autogen_timestamp_deps
+
+# fast build rule for target.
+gtest_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_autogen_timestamp_deps.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_autogen_timestamp_deps.dir/build
+.PHONY : gtest_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named gtest_autogen
+
+# Build rule for target.
+gtest_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_autogen
+.PHONY : gtest_autogen
+
+# fast build rule for target.
+gtest_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/build
+.PHONY : gtest_autogen/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main_autogen_timestamp_deps
+
+# Build rule for target.
+gtest_main_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main_autogen_timestamp_deps
+.PHONY : gtest_main_autogen_timestamp_deps
+
+# fast build rule for target.
+gtest_main_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen_timestamp_deps.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen_timestamp_deps.dir/build
+.PHONY : gtest_main_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main_autogen
+
+# Build rule for target.
+gtest_main_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main_autogen
+.PHONY : gtest_main_autogen
+
+# fast build rule for target.
+gtest_main_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen.dir/build
+.PHONY : gtest_main_autogen/fast
 
 ChatRoomScreen.o: ChatRoomScreen.cpp.o
 .PHONY : ChatRoomScreen.o
@@ -305,6 +549,7 @@ applogic.o: applogic.cpp.o
 # target to build an object file
 applogic.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/applogic.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_applogic.dir/build.make CMakeFiles/test_applogic.dir/applogic.cpp.o
 .PHONY : applogic.cpp.o
 
 applogic.i: applogic.cpp.i
@@ -313,6 +558,7 @@ applogic.i: applogic.cpp.i
 # target to preprocess a source file
 applogic.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/applogic.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_applogic.dir/build.make CMakeFiles/test_applogic.dir/applogic.cpp.i
 .PHONY : applogic.cpp.i
 
 applogic.s: applogic.cpp.s
@@ -321,6 +567,7 @@ applogic.s: applogic.cpp.s
 # target to generate assembly for a file
 applogic.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/applogic.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_applogic.dir/build.make CMakeFiles/test_applogic.dir/applogic.cpp.s
 .PHONY : applogic.cpp.s
 
 chatserver_activation.o: chatserver_activation.cpp.o
@@ -371,6 +618,102 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CombinedChatApp.dir/build.make CMakeFiles/CombinedChatApp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test_applogic.o: test_applogic.cpp.o
+.PHONY : test_applogic.o
+
+# target to build an object file
+test_applogic.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_applogic.dir/build.make CMakeFiles/test_applogic.dir/test_applogic.cpp.o
+.PHONY : test_applogic.cpp.o
+
+test_applogic.i: test_applogic.cpp.i
+.PHONY : test_applogic.i
+
+# target to preprocess a source file
+test_applogic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_applogic.dir/build.make CMakeFiles/test_applogic.dir/test_applogic.cpp.i
+.PHONY : test_applogic.cpp.i
+
+test_applogic.s: test_applogic.cpp.s
+.PHONY : test_applogic.s
+
+# target to generate assembly for a file
+test_applogic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_applogic.dir/build.make CMakeFiles/test_applogic.dir/test_applogic.cpp.s
+.PHONY : test_applogic.cpp.s
+
+test_applogic_autogen/mocs_compilation.o: test_applogic_autogen/mocs_compilation.cpp.o
+.PHONY : test_applogic_autogen/mocs_compilation.o
+
+# target to build an object file
+test_applogic_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_applogic.dir/build.make CMakeFiles/test_applogic.dir/test_applogic_autogen/mocs_compilation.cpp.o
+.PHONY : test_applogic_autogen/mocs_compilation.cpp.o
+
+test_applogic_autogen/mocs_compilation.i: test_applogic_autogen/mocs_compilation.cpp.i
+.PHONY : test_applogic_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+test_applogic_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_applogic.dir/build.make CMakeFiles/test_applogic.dir/test_applogic_autogen/mocs_compilation.cpp.i
+.PHONY : test_applogic_autogen/mocs_compilation.cpp.i
+
+test_applogic_autogen/mocs_compilation.s: test_applogic_autogen/mocs_compilation.cpp.s
+.PHONY : test_applogic_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+test_applogic_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_applogic.dir/build.make CMakeFiles/test_applogic.dir/test_applogic_autogen/mocs_compilation.cpp.s
+.PHONY : test_applogic_autogen/mocs_compilation.cpp.s
+
+test_server_logic.o: test_server_logic.cpp.o
+.PHONY : test_server_logic.o
+
+# target to build an object file
+test_server_logic.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server_logic.dir/build.make CMakeFiles/test_server_logic.dir/test_server_logic.cpp.o
+.PHONY : test_server_logic.cpp.o
+
+test_server_logic.i: test_server_logic.cpp.i
+.PHONY : test_server_logic.i
+
+# target to preprocess a source file
+test_server_logic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server_logic.dir/build.make CMakeFiles/test_server_logic.dir/test_server_logic.cpp.i
+.PHONY : test_server_logic.cpp.i
+
+test_server_logic.s: test_server_logic.cpp.s
+.PHONY : test_server_logic.s
+
+# target to generate assembly for a file
+test_server_logic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server_logic.dir/build.make CMakeFiles/test_server_logic.dir/test_server_logic.cpp.s
+.PHONY : test_server_logic.cpp.s
+
+test_server_logic_autogen/mocs_compilation.o: test_server_logic_autogen/mocs_compilation.cpp.o
+.PHONY : test_server_logic_autogen/mocs_compilation.o
+
+# target to build an object file
+test_server_logic_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server_logic.dir/build.make CMakeFiles/test_server_logic.dir/test_server_logic_autogen/mocs_compilation.cpp.o
+.PHONY : test_server_logic_autogen/mocs_compilation.cpp.o
+
+test_server_logic_autogen/mocs_compilation.i: test_server_logic_autogen/mocs_compilation.cpp.i
+.PHONY : test_server_logic_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+test_server_logic_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server_logic.dir/build.make CMakeFiles/test_server_logic.dir/test_server_logic_autogen/mocs_compilation.cpp.i
+.PHONY : test_server_logic_autogen/mocs_compilation.cpp.i
+
+test_server_logic_autogen/mocs_compilation.s: test_server_logic_autogen/mocs_compilation.cpp.s
+.PHONY : test_server_logic_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+test_server_logic_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server_logic.dir/build.make CMakeFiles/test_server_logic.dir/test_server_logic_autogen/mocs_compilation.cpp.s
+.PHONY : test_server_logic_autogen/mocs_compilation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -379,9 +722,28 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... CombinedChatApp_autogen"
 	@echo "... CombinedChatApp_autogen_timestamp_deps"
+	@echo "... gmock_autogen"
+	@echo "... gmock_autogen_timestamp_deps"
+	@echo "... gmock_main_autogen"
+	@echo "... gmock_main_autogen_timestamp_deps"
+	@echo "... gtest_autogen"
+	@echo "... gtest_autogen_timestamp_deps"
+	@echo "... gtest_main_autogen"
+	@echo "... gtest_main_autogen_timestamp_deps"
+	@echo "... test_applogic_autogen"
+	@echo "... test_applogic_autogen_timestamp_deps"
+	@echo "... test_server_logic_autogen"
+	@echo "... test_server_logic_autogen_timestamp_deps"
 	@echo "... CombinedChatApp"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... test_applogic"
+	@echo "... test_server_logic"
 	@echo "... ChatRoomScreen.o"
 	@echo "... ChatRoomScreen.i"
 	@echo "... ChatRoomScreen.s"
@@ -409,6 +771,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test_applogic.o"
+	@echo "... test_applogic.i"
+	@echo "... test_applogic.s"
+	@echo "... test_applogic_autogen/mocs_compilation.o"
+	@echo "... test_applogic_autogen/mocs_compilation.i"
+	@echo "... test_applogic_autogen/mocs_compilation.s"
+	@echo "... test_server_logic.o"
+	@echo "... test_server_logic.i"
+	@echo "... test_server_logic.s"
+	@echo "... test_server_logic_autogen/mocs_compilation.o"
+	@echo "... test_server_logic_autogen/mocs_compilation.i"
+	@echo "... test_server_logic_autogen/mocs_compilation.s"
 .PHONY : help
 
 

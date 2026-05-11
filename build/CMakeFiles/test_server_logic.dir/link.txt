@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_server_logic.dir/test_server_logic_autogen/mocs_compilation.cpp.o CMakeFiles/test_server_logic.dir/test_server_logic.cpp.o -o test_server_logic  lib/libgtest.a lib/libgmock.a lib/libgtest_main.a lib/libgtest.a 

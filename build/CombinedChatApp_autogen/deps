@@ -536,6 +536,14 @@ CombinedChatApp_autogen/timestamp: \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Network/Qt6NetworkTargets-none.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Network/Qt6NetworkTargets.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Network/Qt6NetworkVersionlessTargets.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestAdditionalTargetInfo.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfig.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfigVersion.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfigVersionImpl.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestDependencies.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestTargets-none.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestTargets.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestVersionlessTargets.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake \
@@ -575,7 +583,10 @@ CombinedChatApp_autogen/timestamp: \
 	/usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
 	/usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake \
 	/usr/share/cmake-3.28/Modules/Compiler/GNU.cmake \
+	/usr/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake \
 	/usr/share/cmake-3.28/Modules/FeatureSummary.cmake \
+	/usr/share/cmake-3.28/Modules/FetchContent.cmake \
+	/usr/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in \
 	/usr/share/cmake-3.28/Modules/FindBoost.cmake \
 	/usr/share/cmake-3.28/Modules/FindOpenGL.cmake \
 	/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake \

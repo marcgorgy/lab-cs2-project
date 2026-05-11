@@ -66,11 +66,11 @@ include CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/compiler_depend.ma
 # Include the progress variables for this target.
 include CMakeFiles/CombinedChatApp_autogen_timestamp_deps.dir/progress.make
 
-CMakeFiles/CombinedChatApp_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
-CMakeFiles/CombinedChatApp_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
 CMakeFiles/CombinedChatApp_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
-CMakeFiles/CombinedChatApp_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 CMakeFiles/CombinedChatApp_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.4.2
+CMakeFiles/CombinedChatApp_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
+CMakeFiles/CombinedChatApp_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
+CMakeFiles/CombinedChatApp_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
 CMakeFiles/CombinedChatApp_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0
 
 CombinedChatApp_autogen_timestamp_deps: CMakeFiles/CombinedChatApp_autogen_timestamp_deps

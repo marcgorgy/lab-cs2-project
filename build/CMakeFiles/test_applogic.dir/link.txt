@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_applogic.dir/test_applogic_autogen/mocs_compilation.cpp.o CMakeFiles/test_applogic.dir/test_applogic.cpp.o CMakeFiles/test_applogic.dir/applogic.cpp.o -o test_applogic  lib/libgtest.a lib/libgmock.a lib/libgtest.a /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 
