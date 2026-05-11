@@ -13,6 +13,16 @@ using boost::asio::detached;
 using boost::asio::use_awaitable;
 using boost::asio::as_tuple;
 
+// Strucuter that will track every single online user at a given moment
+struct ChatSession : public std::enable_shared_from_this<ChatSession> {
+    tcp::socket socket;
+    std::string username = "Anonymous";
+
+    ChatSession(tcp::socket s) : socket(std::move(s)) {}
+};
+
+
+
 //
 // Created by Mohamed Fadul on 5/11/26.
 //
