@@ -25,7 +25,7 @@ void ChatRoomScreen::buildUi()
     root->setContentsMargins(0, 0, 0, 0);
     root->setSpacing(0);
 
-    // ── Top bar ──────────────────────────────────────────────────────────
+    // ── Top bar ───────────────────────────────────────────────────────────────
     auto *topBar = new QFrame(this);
     topBar->setObjectName("topBar");
     topBar->setFixedHeight(56);
@@ -35,6 +35,11 @@ void ChatRoomScreen::buildUi()
 
     m_titleLabel = new QLabel("# general", topBar);
     m_titleLabel->setObjectName("roomTitle");
+
+    // Group indicator — hidden until the user joins a group
+    m_groupLabel = new QLabel(topBar);
+    m_groupLabel->setObjectName("groupBadge");
+    m_groupLabel->hide();
 
     m_statusLabel = new QLabel("● Connecting…", topBar);
     m_statusLabel->setObjectName("networkStatus");
@@ -51,6 +56,8 @@ void ChatRoomScreen::buildUi()
     m_logoutBtn->setCursor(Qt::PointingHandCursor);
 
     topLayout->addWidget(m_titleLabel);
+    topLayout->addSpacing(8);
+    topLayout->addWidget(m_groupLabel);
     topLayout->addSpacing(16);
     topLayout->addWidget(m_statusLabel);
     topLayout->addWidget(spacer);
@@ -60,7 +67,7 @@ void ChatRoomScreen::buildUi()
 
     root->addWidget(topBar);
 
-    // ── Middle area: chat + user list ─────────────────────────────────
+    // ── Middle area: chat + user list ─────────────────────────────────────────
     auto *splitter = new QSplitter(Qt::Horizontal, this);
     splitter->setObjectName("mainSplitter");
     splitter->setHandleWidth(1);
@@ -96,7 +103,7 @@ void ChatRoomScreen::buildUi()
 
     root->addWidget(splitter, 1);
 
-    // ── Input bar ────────────────────────────────────────────────────────
+    // ── Input bar ─────────────────────────────────────────────────────────────
     auto *inputBar = new QFrame(this);
     inputBar->setObjectName("inputBar");
     inputBar->setFixedHeight(60);
@@ -107,7 +114,7 @@ void ChatRoomScreen::buildUi()
 
     m_messageInput = new QLineEdit(inputBar);
     m_messageInput->setObjectName("messageInput");
-    m_messageInput->setPlaceholderText("Type a message…");
+    m_messageInput->setPlaceholderText("Type a message… (or /join <group>)");
 
     m_sendBtn = new QPushButton("Send", inputBar);
     m_sendBtn->setObjectName("sendBtn");
@@ -119,13 +126,16 @@ void ChatRoomScreen::buildUi()
 
     root->addWidget(inputBar);
 
-    // Connections
-    connect(m_sendBtn,      &QPushButton::clicked,    this, &ChatRoomScreen::onSendClicked);
-    connect(m_messageInput, &QLineEdit::returnPressed, this, &ChatRoomScreen::onSendClicked);
+    // ── Connections ───────────────────────────────────────────────────────────
+    connect(m_sendBtn,      &QPushButton::clicked,
+            this,           &ChatRoomScreen::onSendClicked);
+    connect(m_messageInput, &QLineEdit::returnPressed,
+            this,           &ChatRoomScreen::onSendClicked);
     connect(m_settingsBtn,  &QPushButton::clicked, this, [this]() {
         emit settingsRequested(m_username, m_host, m_port);
     });
-    connect(m_logoutBtn, &QPushButton::clicked, this, &ChatRoomScreen::logoutRequested);
+    connect(m_logoutBtn, &QPushButton::clicked,
+            this,        &ChatRoomScreen::logoutRequested);
 }
 
 void ChatRoomScreen::applyStyles()
@@ -137,18 +147,24 @@ void ChatRoomScreen::applyStyles()
             background: #0f3460;
             border-bottom: 1px solid rgba(255,255,255,0.08);
         }
-
         #roomTitle {
             font-size: 16px;
             font-weight: 700;
             color: #ffffff;
         }
-
+        #groupBadge {
+            font-size: 12px;
+            font-weight: 600;
+            color: #f5a623;
+            background: rgba(245,166,35,0.15);
+            border: 1px solid rgba(245,166,35,0.4);
+            border-radius: 10px;
+            padding: 2px 10px;
+        }
         #networkStatus {
             font-size: 12px;
             color: #4caf50;
         }
-
         #iconBtn {
             background: rgba(255,255,255,0.08);
             color: rgba(255,255,255,0.8);
@@ -177,12 +193,10 @@ void ChatRoomScreen::applyStyles()
             padding: 12px;
             selection-background-color: #e94560;
         }
-
         #userPanel {
             background: #16213e;
             border-left: 1px solid rgba(255,255,255,0.06);
         }
-
         #userPanelHeader {
             color: rgba(255,255,255,0.4);
             font-size: 11px;
@@ -192,7 +206,6 @@ void ChatRoomScreen::applyStyles()
             border-bottom: 1px solid rgba(255,255,255,0.06);
             padding-left: 12px;
         }
-
         #userList {
             background: transparent;
             border: none;
@@ -206,7 +219,6 @@ void ChatRoomScreen::applyStyles()
             background: #0f3460;
             border-top: 1px solid rgba(255,255,255,0.08);
         }
-
         #messageInput {
             background: rgba(255,255,255,0.06);
             border: 1px solid rgba(255,255,255,0.12);
@@ -215,9 +227,7 @@ void ChatRoomScreen::applyStyles()
             padding: 8px 14px;
             font-size: 13px;
         }
-        #messageInput:focus {
-            border: 1px solid #e94560;
-        }
+        #messageInput:focus { border: 1px solid #e94560; }
 
         #sendBtn {
             background: #e94560;
@@ -234,13 +244,12 @@ void ChatRoomScreen::applyStyles()
             color: rgba(255,255,255,0.3);
         }
 
-        QScrollBar:vertical {
-            background: transparent; width: 6px;
-        }
+        QScrollBar:vertical { background: transparent; width: 6px; }
         QScrollBar::handle:vertical {
             background: rgba(255,255,255,0.2); border-radius: 3px;
         }
-        QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+        QScrollBar::add-line:vertical,
+        QScrollBar::sub-line:vertical { height: 0; }
     )");
 }
 
@@ -252,6 +261,7 @@ void ChatRoomScreen::configure(const QString &username, const QString &host, int
     m_host     = host;
     m_port     = port;
     m_titleLabel->setText(QString("# general  —  %1").arg(username));
+    m_groupLabel->hide();
     setNetworkStatus("Connecting…", false);
     m_chatDisplay->clear();
     m_userList->clear();
@@ -269,7 +279,6 @@ void ChatRoomScreen::appendMessage(const QString &sender, const QString &text, b
                 "<span style='color:#d0d0d0'>%4</span>")
             .arg(color, sender.toHtmlEscaped(), time, text.toHtmlEscaped())
     );
-    // Scroll to bottom
     m_chatDisplay->verticalScrollBar()->setValue(
         m_chatDisplay->verticalScrollBar()->maximum());
 }
@@ -277,7 +286,8 @@ void ChatRoomScreen::appendMessage(const QString &sender, const QString &text, b
 void ChatRoomScreen::appendSystemMessage(const QString &text)
 {
     m_chatDisplay->append(
-        QString("<span style='color:rgba(255,255,255,0.35);font-style:italic;font-size:12px'>%1</span>")
+        QString("<span style='color:rgba(255,255,255,0.35);"
+                "font-style:italic;font-size:12px'>%1</span>")
             .arg(text.toHtmlEscaped())
     );
 }
@@ -287,8 +297,7 @@ void ChatRoomScreen::setNetworkStatus(const QString &status, bool isError)
     const QString color = isError ? "#ff6b6b" : "#4caf50";
     const QString dot   = isError ? "✕" : "●";
     m_statusLabel->setText(
-        QString("<span style='color:%1'>%2 %3</span>").arg(color, dot, status)
-    );
+        QString("<span style='color:%1'>%2 %3</span>").arg(color, dot, status));
     m_statusLabel->setTextFormat(Qt::RichText);
 }
 
@@ -298,7 +307,7 @@ void ChatRoomScreen::setConnected(bool connected)
     m_sendBtn->setEnabled(connected);
     setNetworkStatus(connected ? "Connected" : "Disconnected", !connected);
     if (connected) {
-        m_messageInput->setPlaceholderText("Type a message…");
+        m_messageInput->setPlaceholderText("Type a message… (or /join <group>)");
         m_messageInput->setFocus();
     } else {
         m_messageInput->setPlaceholderText("Not connected");
@@ -323,6 +332,19 @@ void ChatRoomScreen::removeUser(const QString &username)
 void ChatRoomScreen::clearUsers()
 {
     m_userList->clear();
+}
+
+void ChatRoomScreen::setCurrentGroup(const QString &groupName)
+{
+    if (groupName.isEmpty()) {
+        m_groupLabel->hide();
+        m_messageInput->setPlaceholderText("Type a message… (or /join <group>)");
+    } else {
+        m_groupLabel->setText("  # " + groupName + "  ");
+        m_groupLabel->show();
+        m_messageInput->setPlaceholderText(
+            QString("Message #%1  (or /leave)").arg(groupName));
+    }
 }
 
 // ── Private slots ─────────────────────────────────────────────────────────────
