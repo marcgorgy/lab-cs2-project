@@ -31,7 +31,7 @@ void AppLogic::onGuiLoginRequested(const QString &username, const QString &host,
 
      //  TEMPORARY HACK TO TEST WITHOUT ANN -- FOR NOUR from MOHAMED
     // THis will wait 1 second, then pretend Ann's code successfully connected
-    
+    /* QTimer::singleShot(1000, this, &AppLogic::onNetworkConnected); */
 
 }
 
@@ -47,7 +47,9 @@ void AppLogic::onGuiMessageSendRequested(const QString &text) {
 
      // TEMPORARY HACK TO TEST WITHOUT ANN -- FOR NOUR from MOHAMED
     // Wait half a second, then pretend the server replied
-  
+    /* QTimer::singleShot(500, this, [this, text]() {
+        onNetworkIncomingMessage("MockServer", "You just said: " + text);
+    }); */
 }
 
 void AppLogic::onGuiLogoutRequested() {
