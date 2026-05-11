@@ -1,0 +1,5 @@
+/home/marc_gorgy/lab-cs2-project/build/CMakeFiles/QtChatApp.dir
+/home/marc_gorgy/lab-cs2-project/build/CMakeFiles/edit_cache.dir
+/home/marc_gorgy/lab-cs2-project/build/CMakeFiles/rebuild_cache.dir
+/home/marc_gorgy/lab-cs2-project/build/CMakeFiles/QtChatApp_autogen_timestamp_deps.dir
+/home/marc_gorgy/lab-cs2-project/build/CMakeFiles/QtChatApp_autogen.dir

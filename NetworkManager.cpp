@@ -48,6 +48,7 @@ void NetworkManager::sendChatMessage(const QString &text)
 
 void NetworkManager::disconnectFromServer()
 {
+    m_buffer.clear();
     socket->disconnectFromHost();
 }
 
@@ -62,20 +63,29 @@ void NetworkManager::sendJson(const QJsonObject &obj)
 
 // ─────────────────────────────────────────────
 
+
+
 void NetworkManager::onReadyRead()
 {
-    QByteArray data = socket->readAll();
+    // Append whatever arrived to our persistent buffer.
+    // readAll() may contain 0, 1, or many complete JSON lines.
+    m_buffer += socket->readAll();
 
-    QJsonParseError err;
-    QJsonDocument doc = QJsonDocument::fromJson(data, &err);
+    // Process every complete line (terminated by '\n') that is in the buffer.
+    // Anything left over (a partial line) stays in m_buffer for the next signal.
+    int newlinePos;
+    while ((newlinePos = m_buffer.indexOf('\n')) != -1) {
+        QByteArray line = m_buffer.left(newlinePos).trimmed();
+        m_buffer.remove(0, newlinePos + 1); // consume this line + the '\n'
 
-    if (err.error != QJsonParseError::NoError)
-        return;
+        if (line.isEmpty()) continue;
 
-    if (!doc.isObject())
-        return;
+        QJsonParseError err;
+        QJsonDocument doc = QJsonDocument::fromJson(line, &err);
+        if (err.error != QJsonParseError::NoError || !doc.isObject()) continue;
 
-    processJson(doc.object());
+        processJson(doc.object());
+    }
 }
 
 // ─────────────────────────────────────────────

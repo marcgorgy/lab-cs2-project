@@ -35,7 +35,7 @@ private slots:
 private:
     void sendJson(const QJsonObject &obj);
     void processJson(const QJsonObject &obj);
-
+    QByteArray m_buffer; // for accumulating incoming data until we get full lines
     QTcpSocket *socket;
     QString m_username;
 };
