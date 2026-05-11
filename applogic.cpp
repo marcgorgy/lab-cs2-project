@@ -29,10 +29,10 @@ void AppLogic::onGuiLoginRequested(const QString &username, const QString &host,
     // Passes clean data to our networking teammate, Ann
     emit requestNetworkConnect(m_myUsername, m_host, m_port);
 
-    /* //  TEMPORARY HACK TO TEST WITHOUT ANN -- FOR NOUR from MOHAMED
+     //  TEMPORARY HACK TO TEST WITHOUT ANN -- FOR NOUR from MOHAMED
     // THis will wait 1 second, then pretend Ann's code successfully connected
     QTimer::singleShot(1000, this, &AppLogic::onNetworkConnected);
-    */
+
 }
 
 void AppLogic::onGuiMessageSendRequested(const QString &text) {
@@ -45,12 +45,12 @@ void AppLogic::onGuiMessageSendRequested(const QString &text) {
     // Pass text to Ann, where she will wrap it in JSON using QJson objects
     emit requestNetworkSendChat(text.trimmed());
 
-    /* // TEMPORARY HACK TO TEST WITHOUT ANN -- FOR NOUR from MOHAMED
+     // TEMPORARY HACK TO TEST WITHOUT ANN -- FOR NOUR from MOHAMED
     // Wait half a second, then pretend the server replied
     QTimer::singleShot(500, this, [this, text]() {
         onNetworkIncomingMessage("MockServer", "You just said: " + text);
     });
-    */
+
 }
 
 void AppLogic::onGuiLogoutRequested() {
@@ -68,6 +68,7 @@ void AppLogic::onNetworkConnected() {
     // Switch the screen to View 2
     emit navigateToChatScreen(m_myUsername, m_host, m_port);
     emit updateNetworkStatus("Connected", false);
+    emit setChatInputEnabled(true); //Tells chatroom to unlock input box
 }
 
 void AppLogic::onNetworkConnectionFailed(const QString &errorMsg) {
@@ -83,6 +84,7 @@ void AppLogic::onNetworkDisconnected() {
 
     emit chatScreenClearUsers();
     emit navigateToLoginScreen();
+    emit setChatInputEnabled(false); //Tells chatroom to lock input box incase server crashes
 }
 
 // ─── 3. MESSAGE FORMATTING & DATA HANDLING ─────────────

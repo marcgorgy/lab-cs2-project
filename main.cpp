@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
 
     QObject::connect(&appLogic, &AppLogic::setLoginConnectingState, loginScreen, &LoginScreen::setConnecting);
 
+
     // ─────────────────────────────────────────
     // 3. GUI → AppLogic (Chat Screen)
     // ─────────────────────────────────────────
@@ -58,6 +59,7 @@ int main(int argc, char *argv[])
 
     QObject::connect(&appLogic, &AppLogic::chatScreenClearUsers, chatScreen, &ChatRoomScreen::clearUsers);
 
+    QObject::connect(&appLogic, &AppLogic::setChatInputEnabled, chatScreen, &ChatRoomScreen::setConnected); //New signal
     // ─────────────────────────────────────────
     // 4. AppLogic → NetworkManager
     // (Outgoing requests)

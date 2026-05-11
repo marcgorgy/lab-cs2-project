@@ -51,6 +51,7 @@ signals:
     void chatScreenAddUser(const QString &username);
     void chatScreenRemoveUser(const QString &username);
     void chatScreenClearUsers();
+    void setChatInputEnabled(bool enabled); // Fixed error, missing signal between logic layer
 
     // To Network Layer
     void requestNetworkConnect(const QString &username, const QString &host, int port);
